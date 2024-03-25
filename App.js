@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 import FlatCards from "./components/FlatCards";
 import ElevatedCards from "./components/ElevatedCards";
+import FancyCards from "./components/FancyCards";
 
 export default function App() {
   return (
@@ -9,6 +10,7 @@ export default function App() {
       <ScrollView>
         <FlatCards />
         <ElevatedCards/>
+        <FancyCards/>
       </ScrollView>
     </SafeAreaView>
   );
