@@ -37,12 +37,11 @@ export default function ActionCards() {
 
         <View style={styles.footerContainer}>
           <Text numberOfLines={3}>
-          <TouchableOpacity
-            onPress={() => openWebsite("https://www.github.com")}
-          >
-            <Text>Read More</Text>
-          </TouchableOpacity>
-
+            <TouchableOpacity
+              onPress={() => openWebsite("https://www.github.com")}
+            >
+              <Text style={styles.readMore}>Read More</Text>
+            </TouchableOpacity>
           </Text>
         </View>
       </View>
@@ -71,14 +70,37 @@ const styles = StyleSheet.create({
       height: 1,
     },
   },
-  headingContainer: {},
-  headerText: {},
+  headingContainer: {
+    height: 40,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  headerText: {
+    fontSize: 16,
+    fontWeight: "600",
+  },
   cardImage: {
     height: 180,
     marginBottom: 8,
     borderTopLeftRadius: 6,
     borderTopRightRadius: 6,
   },
-  bodyContainer: {},
-  footerContainer: {},
+  bodyContainer: {
+    padding: 10,
+  },
+  footerContainer: {
+    padding: 8,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-evenly",
+  },
+  readMore: {
+    fontSize: 16,
+    color: "#FFF",
+    backgroundColor: "#000000",
+    paddingHorizontal: 20,
+    paddingVertical: 6,
+    borderRadius: 6
+  },
 });
