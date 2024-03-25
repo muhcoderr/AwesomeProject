@@ -16,7 +16,7 @@ export default function ActionCards() {
   return (
     <View>
       <Text style={styles.headingText}>Blog Card</Text>
-      <View style={[styles.card, styles.elevatedCard]}>
+      <View style={[styles.card, styles.cardElevated]}>
         <View style={styles.headingContainer}>
           <Text style={styles.headerText}>React Native</Text>
         </View>
@@ -36,14 +36,14 @@ export default function ActionCards() {
         </View>
 
         <View style={styles.footerContainer}>
-          {/* <Text numberOfLines={3}> */}
+          <Text numberOfLines={3}>
           <TouchableOpacity
             onPress={() => openWebsite("https://www.github.com")}
           >
             <Text>Read More</Text>
           </TouchableOpacity>
 
-          {/* </Text> */}
+          </Text>
         </View>
       </View>
     </View>
@@ -56,8 +56,21 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     paddingHorizontal: 8,
   },
-  card: {},
-  elevatedCard: {},
+  card: {
+    width: 330,
+    height: 360,
+    borderRadius: 6,
+    marginVertical: 12,
+    marginHorizontal: 16,
+  },
+  cardElevated: {
+    backgroundColor: "#FFFFFF",
+    elevation: 3,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+  },
   headingContainer: {},
   headerText: {},
   cardImage: {
